@@ -3,7 +3,9 @@ use std::fmt::Binary;
 use crate::structs::nums::*;
 
 fn pad_left(bn : String) -> String {
-    // TODO replace with zero later
+    // if bn.len() == UNIT_SIZE {
+    //     return bn;
+    // }
     String::from("_").repeat(UNIT_SIZE - bn.len()) + &bn
 }
 

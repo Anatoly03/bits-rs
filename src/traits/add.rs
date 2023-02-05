@@ -27,9 +27,11 @@ impl<'a, 'b> Add<&'b UBigInt> for &'a UBigInt {
 
         for i in 0..limit {
             let a1 = self.0.get(i).or(Some(&0)).unwrap();
-            let a2 = self.0.get(i).or(Some(&0)).unwrap();
+            let a2 = rhs.0.get(i).or(Some(&0)).unwrap();
+            let sum = a1.wrapping_add(*a2).wrapping_add(carry);
 
-            result.push(a1 + a2 + carry);
+            result.push(sum);
+            println!("{} + {} + {} = {}", a1, a2, carry, sum);
 
             carry = if a1.checked_add(*a2).is_none() {1} else {0}
         }
