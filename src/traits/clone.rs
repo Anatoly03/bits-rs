@@ -1,5 +1,5 @@
 
-use crate::structs::*;
+use crate::structs::nums::*;
 
 impl Clone for UBigInt {
     fn clone(&self) -> Self {

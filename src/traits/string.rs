@@ -1,6 +1,6 @@
 use std::string::*;
 
-use crate::structs::*;
+use crate::structs::nums::*;
 
 impl ToString for UBigInt {
     fn to_string(&self) -> String {

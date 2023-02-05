@@ -1,7 +1,7 @@
 use std::cmp::*;
 use std::ops::Add;
 
-use crate::structs::*;
+use crate::structs::nums::*;
 
 impl Add for UBigInt {
     type Output = UBigInt;

@@ -1,7 +1,7 @@
 
 use std::ops::Neg;
 
-use crate::structs::*;
+use crate::structs::nums::*;
 
 impl Neg for UBigInt {
     type Output = BigInt;
