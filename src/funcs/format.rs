@@ -1,11 +1,11 @@
 use crate::structs::consts::UNIT_SIZE;
 use crate::structs::nums::*;
 
-pub fn pad_left(bn: String, length: usize) -> String {
+fn pad_left(bn: String, length: usize) -> String {
     String::from("0").repeat(length - bn.len()) + &bn
 }
 
-pub fn unpad_left(mut num: String) -> String {
+fn unpad_left(mut num: String) -> String {
     while let Some(i) = num.get(0..1) {
         if i == "0" {
             num.remove(0);
