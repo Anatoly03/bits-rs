@@ -3,6 +3,9 @@ use std::ops::Add;
 
 use crate::structs::nums::*;
 
+/**
+ * UBigInt + UBigInt
+ */
 impl<'a, 'b> Add<&'b UBigInt> for &'a UBigInt {
     type Output = UBigInt;
 
@@ -40,11 +43,18 @@ impl<'a, 'b> Add<&'b UBigInt> for &'a UBigInt {
     }
 }
 
-impl Add for BigInt {
-    type Output = Self;
-
-    fn add(self, rhs: Self) -> Self::Output {
-        todo!()
+/**
+ * BigInt + BigInt
+ */
+impl<'a, 'b> Add<&'b BigInt> for &'a BigInt {
+    type Output = BigInt;
+    
+    fn add(self, rhs: &'b BigInt) -> Self::Output {
+        if self.0 == rhs.0 {
+            BigInt (self.0, self.1.add(&rhs.1))
+        } else {
+            todo!()
+        }
     }
 }
 
