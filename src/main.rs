@@ -1,4 +1,5 @@
-use crate::structs::nums::{UBigInt, Atomic};
+use crate::structs::nums::UBigInt;
+use crate::structs::consts::Atomic;
 
 pub mod structs;
 pub mod impls;
