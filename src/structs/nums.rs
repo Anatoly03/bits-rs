@@ -14,7 +14,7 @@ pub struct UBigInt (pub Vec<Atomic>);
 
 /**
  * Type `BigInt`
- * Param `0` : Sign
+ * Param `0` : Sign (True -> Negative)
  * Param `1` : Data
  */
 #[derive(PartialEq, Eq, Hash)]
