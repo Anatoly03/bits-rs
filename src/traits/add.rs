@@ -3,8 +3,8 @@ use std::ops::Add;
 
 use crate::structs::nums::*;
 
-impl Add for UBigInt {
-    type Output = Self;
+impl<'a, 'b> Add<&'b UBigInt> for &'a UBigInt {
+    type Output = UBigInt;
 
     /**
      * Consider you have the following [u4] arrays.
@@ -13,7 +13,7 @@ impl Add for UBigInt {
      * The sum would be:
      * `[0111, 0000, 1111]`
      */
-    fn add(self, rhs: Self) -> Self::Output {
+    fn add(self, rhs: &'b UBigInt) -> Self::Output {
         // Make sure "self" is the longer vector
         if self.0.len() < rhs.0.len() {
             return rhs + self;
