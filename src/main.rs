@@ -1,8 +1,8 @@
 use crate::structs::nums::{UBigInt, Atomic};
 
 pub mod structs;
-pub mod traits;
 pub mod impls;
+pub mod traits;
 
 fn main() {
     let big_int = UBigInt (vec![1, 10]);
