@@ -18,17 +18,17 @@ pub struct UBigInt (pub Vec<Atomic>);
  */
 pub struct BigInt (pub bool, pub UBigInt);
 
-/**
+/*
  * Type `UFraction`
  * Param `0` : numerator
  * Param `1` : denominator
  */
-pub struct UFraction (pub UBigInt, pub UBigInt);
+// pub struct UFraction (pub UBigInt, pub UBigInt);
 
-/**
+/*
  * Type `Fraction`
  * Param `0` : sign
  * Param `1` : fraction
  */
-pub struct Fraction (pub bool, pub UFraction);
+// pub struct Fraction (pub bool, pub UFraction);
 

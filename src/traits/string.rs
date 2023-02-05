@@ -14,14 +14,14 @@ impl ToString for BigInt {
     }
 }
 
-impl ToString for UFraction {
-    fn to_string(&self) -> String {
-        todo!()
-    }
-}
+// impl ToString for UFraction {
+//     fn to_string(&self) -> String {
+//         todo!()
+//     }
+// }
 
-impl ToString for Fraction {
-    fn to_string(&self) -> String {
-        todo!()
-    }
-}
+// impl ToString for Fraction {
+//     fn to_string(&self) -> String {
+//         todo!()
+//     }
+// }

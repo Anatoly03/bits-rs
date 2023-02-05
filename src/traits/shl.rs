@@ -18,18 +18,18 @@ impl Shl for BigInt {
     }
 }
 
-impl Shl for UFraction {
-    type Output = Self;
+// impl Shl for UFraction {
+//     type Output = Self;
 
-    fn shl(self, rhs: Self) -> Self::Output {
-        todo!()
-    }
-}
+//     fn shl(self, rhs: Self) -> Self::Output {
+//         todo!()
+//     }
+// }
 
-impl Shl for Fraction {
-    type Output = Self;
+// impl Shl for Fraction {
+//     type Output = Self;
 
-    fn shl(self, rhs: Self) -> Self::Output {
-        todo!()
-    }
-}
+//     fn shl(self, rhs: Self) -> Self::Output {
+//         todo!()
+//     }
+// }

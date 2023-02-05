@@ -32,14 +32,14 @@ impl Binary for BigInt {
     }
 }
 
-impl Binary for UFraction {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        todo!()
-    }
-}
+// impl Binary for UFraction {
+//     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+//         todo!()
+//     }
+// }
 
-impl Binary for Fraction {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        todo!()
-    }
-}
+// impl Binary for Fraction {
+//     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+//         todo!()
+//     }
+// }

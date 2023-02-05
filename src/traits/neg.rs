@@ -19,18 +19,18 @@ impl Neg for BigInt {
     }
 }
 
-impl Neg for UFraction {
-    type Output = Fraction;
+// impl Neg for UFraction {
+//     type Output = Fraction;
 
-    fn neg(self) -> Self::Output {
-        Fraction(true, self)
-    }
-}
+//     fn neg(self) -> Self::Output {
+//         Fraction(true, self)
+//     }
+// }
 
-impl Neg for Fraction {
-    type Output = Self;
+// impl Neg for Fraction {
+//     type Output = Self;
 
-    fn neg(self) -> Self::Output {
-        Fraction(!self.0, self.1)
-    }
-}
+//     fn neg(self) -> Self::Output {
+//         Fraction(!self.0, self.1)
+//     }
+// }

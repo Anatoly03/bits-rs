@@ -14,14 +14,14 @@ impl Debug for BigInt {
     }
 }
 
-impl Debug for UFraction {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.debug_tuple("UFraction").field(&self.0).field(&self.1).finish()
-    }
-}
+// impl Debug for UFraction {
+//     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+//         f.debug_tuple("UFraction").field(&self.0).field(&self.1).finish()
+//     }
+// }
 
-impl Debug for Fraction {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.debug_tuple("Fraction").field(&self.0).field(&self.1).finish()
-    }
-}
+// impl Debug for Fraction {
+//     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+//         f.debug_tuple("Fraction").field(&self.0).field(&self.1).finish()
+//     }
+// }
