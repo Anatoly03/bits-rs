@@ -17,14 +17,8 @@ impl<'a, 'b> Add<&'b UBigInt> for &'a UBigInt {
      * `[0111, 0000, 1111]`
      */
     fn add(self, rhs: &'b UBigInt) -> Self::Output {
-        // Make sure "self" is the longer vector
-        if self.0.len() < rhs.0.len() {
-            return rhs + self;
-        }
-
         let limit = max(self.0.len(), rhs.0.len());
 
-        // Calculate the sum assuming "self" is the longer vector
         let mut result = Vec::new();
         let mut carry = 0;
 
