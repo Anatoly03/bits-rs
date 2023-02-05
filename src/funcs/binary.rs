@@ -1,4 +1,5 @@
 use crate::structs::nums::*;
+use crate::structs::consts::UNIT_SIZE;
 
 pub fn pad_left(bn: String) -> String {
     // if bn.len() == UNIT_SIZE {
