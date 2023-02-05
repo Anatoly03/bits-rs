@@ -1,3 +1,4 @@
+use crate::impls::new::New;
 use crate::structs::nums::UBigInt;
 use crate::structs::consts::Atomic;
 
@@ -10,7 +11,7 @@ pub mod macros;
 fn main() {
     let big_int = UBigInt (vec![1, 10]);
     let big_int_2 = UBigInt (vec![Atomic::MAX, 10]);
-    let big_zero = UBigInt (vec![0]);
+    let big_zero = UBigInt::new();
     let sum = &big_int + &big_int_2;
     
     println!("{:b}", big_int);
