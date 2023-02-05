@@ -10,6 +10,8 @@ impl<'a, 'b> Sub<&'b UBigInt> for &'a UBigInt {
 
     fn sub(self, rhs: &'b UBigInt) -> Self::Output {
         todo!()
+
+        //trim(self)
     }
 }
 
@@ -21,5 +23,8 @@ impl<'a, 'b> Sub<&'b BigInt> for &'a BigInt {
 
     fn sub(self, rhs: &'b BigInt) -> Self::Output {
         todo!()
+
+        //trim(self.1)
+        //set_sign_for_0(self)
     }
 }

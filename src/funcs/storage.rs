@@ -5,3 +5,9 @@ pub fn trim(mut bi: UBigInt) {
         bi.0.pop();
     }
 }
+
+pub fn set_sign_for_0(mut bi: BigInt) {
+    if bi.1.0.len() == 0 {
+        bi.0 = false;
+    }
+}
