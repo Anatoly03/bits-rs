@@ -1,9 +1,15 @@
 
 /**
+ * The atomic unit of storage
+ */
+pub type Atomic = u64;
+pub const unit_size : usize = 64;
+
+/**
  * Type `UBigInt`
  * Param `0`: Vector of all 
  */
-pub struct UBigInt (pub Vec<usize>);
+pub struct UBigInt (pub Vec<Atomic>);
 
 /**
  * Type `BigInt`

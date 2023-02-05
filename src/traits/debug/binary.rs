@@ -2,6 +2,11 @@ use std::fmt::Binary;
 
 use crate::structs::nums::*;
 
+fn pad_left(bn : String) -> String {
+    // TODO replace with zero later
+    String::from("_").repeat(unit_size - bn.len()) + &bn
+}
+
 impl Binary for UBigInt {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let bits = self
@@ -10,6 +15,7 @@ impl Binary for UBigInt {
             .into_iter()
             .rev()
             .map(|i| format!("{i:b}"))
+            .map(pad_left)
             .reduce(|a, b| a + &b)
             .or(Some("0".to_string()))
             .unwrap();
