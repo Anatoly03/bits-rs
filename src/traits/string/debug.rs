@@ -10,7 +10,10 @@ impl Debug for UBigInt {
 
 impl Debug for BigInt {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.debug_tuple("BigInt").field(&self.0).field(&self.1).finish()
+        f.debug_tuple("BigInt")
+            .field(&self.0)
+            .field(&self.1)
+            .finish()
     }
 }
 

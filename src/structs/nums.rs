@@ -1,16 +1,15 @@
-
 /**
  * The atomic unit of storage
  */
 pub type Atomic = u8;
-pub const UNIT_SIZE : usize = 8;
+pub const UNIT_SIZE: usize = 8;
 
 /**
  * Type `UBigInt`
- * Param `0`: Vector of all 
+ * Param `0`: Vector of all
  */
 #[derive(PartialEq, Eq, Hash)]
-pub struct UBigInt (pub Vec<Atomic>);
+pub struct UBigInt(pub Vec<Atomic>);
 
 /**
  * Type `BigInt`
@@ -18,7 +17,7 @@ pub struct UBigInt (pub Vec<Atomic>);
  * Param `1` : Data
  */
 #[derive(PartialEq, Eq, Hash)]
-pub struct BigInt (pub bool, pub UBigInt);
+pub struct BigInt(pub bool, pub UBigInt);
 
 /*
  * Type `UFraction`
@@ -33,4 +32,3 @@ pub struct BigInt (pub bool, pub UBigInt);
  * Param `1` : fraction
  */
 // pub struct Fraction (pub bool, pub UFraction);
-

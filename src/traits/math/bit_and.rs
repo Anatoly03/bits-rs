@@ -31,6 +31,6 @@ impl<'a, 'b> BitAnd<&'b BigInt> for &'a BigInt {
     type Output = BigInt;
 
     fn bitand(self, rhs: &'b BigInt) -> Self::Output {
-        BigInt (self.0 == rhs.0, &self.1 & &rhs.1)
+        BigInt(self.0 == rhs.0, &self.1 & &rhs.1)
     }
 }

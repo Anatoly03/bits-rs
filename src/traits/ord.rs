@@ -13,9 +13,9 @@ impl PartialOrd for UBigInt {
             let s = self.0.get(i).or(Some(&0)).unwrap();
             let o = other.0.get(i).or(Some(&0)).unwrap();
 
-            if (s < o) {
+            if s < o {
                 return Some(Ordering::Less);
-            } else if (s < o) {
+            } else if s < o {
                 return Some(Ordering::Greater);
             }
         }
@@ -32,8 +32,8 @@ impl PartialOrd for BigInt {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         match (self.0, other.0) {
             (true, true) => other.1.partial_cmp(&self.1), // negative compare
-            (true, false) => Some(Ordering::Less), // self is negative
-            (false, true) => Some(Ordering::Greater), // other is negative
+            (true, false) => Some(Ordering::Less),        // self is negative
+            (false, true) => Some(Ordering::Greater),     // other is negative
             (false, false) => self.1.partial_cmp(&other.1), // positive compare
         }
     }

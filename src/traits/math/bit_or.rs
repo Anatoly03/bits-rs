@@ -31,6 +31,6 @@ impl<'a, 'b> BitOr<&'b BigInt> for &'a BigInt {
     type Output = BigInt;
 
     fn bitor(self, rhs: &'b BigInt) -> Self::Output {
-        BigInt (self.0 == rhs.0, &self.1 | &rhs.1)
+        BigInt(self.0 == rhs.0, &self.1 | &rhs.1)
     }
 }

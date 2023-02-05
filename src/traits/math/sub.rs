@@ -18,7 +18,7 @@ impl<'a, 'b> Sub<&'b UBigInt> for &'a UBigInt {
  */
 impl<'a, 'b> Sub<&'b BigInt> for &'a BigInt {
     type Output = BigInt;
-    
+
     fn sub(self, rhs: &'b BigInt) -> Self::Output {
         todo!()
     }
