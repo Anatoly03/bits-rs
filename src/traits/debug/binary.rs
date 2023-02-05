@@ -4,7 +4,7 @@ use crate::structs::nums::*;
 
 fn pad_left(bn : String) -> String {
     // TODO replace with zero later
-    String::from("_").repeat(unit_size - bn.len()) + &bn
+    String::from("_").repeat(UNIT_SIZE - bn.len()) + &bn
 }
 
 impl Binary for UBigInt {

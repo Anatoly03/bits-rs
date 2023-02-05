@@ -3,7 +3,7 @@
  * The atomic unit of storage
  */
 pub type Atomic = u64;
-pub const unit_size : usize = 64;
+pub const UNIT_SIZE : usize = 64;
 
 /**
  * Type `UBigInt`
