@@ -1,7 +1,6 @@
 
 pub mod math;
-pub mod debug;
+pub mod string;
 
 pub mod clone;
 pub mod ord;
-pub mod string;
