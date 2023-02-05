@@ -9,7 +9,7 @@ pub const UNIT_SIZE : usize = 8;
  * Type `UBigInt`
  * Param `0`: Vector of all 
  */
-#[derive(PartialEq, Eq)]
+#[derive(PartialEq, Eq, Hash)]
 pub struct UBigInt (pub Vec<Atomic>);
 
 /**
@@ -17,7 +17,7 @@ pub struct UBigInt (pub Vec<Atomic>);
  * Param `0` : Sign
  * Param `1` : Data
  */
-#[derive(PartialEq, Eq)]
+#[derive(PartialEq, Eq, Hash)]
 pub struct BigInt (pub bool, pub UBigInt);
 
 /*
