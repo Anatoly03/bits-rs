@@ -5,7 +5,7 @@ use crate::structs::nums::*;
 impl Shl for UBigInt {
     type Output = Self;
 
-    fn shl(self, rhs: usize) -> Self::Output {
+    fn shl(self, rhs: Self) -> Self::Output {
         todo!()
     }
 }
@@ -13,7 +13,7 @@ impl Shl for UBigInt {
 impl Shl for BigInt {
     type Output = Self;
 
-    fn shl(self, rhs: usize) -> Self::Output {
+    fn shl(self, rhs: Self) -> Self::Output {
         todo!()
     }
 }
@@ -21,7 +21,7 @@ impl Shl for BigInt {
 impl Shl for UFraction {
     type Output = Self;
 
-    fn shl(self, rhs: usize) -> Self::Output {
+    fn shl(self, rhs: Self) -> Self::Output {
         todo!()
     }
 }
@@ -29,7 +29,7 @@ impl Shl for UFraction {
 impl Shl for Fraction {
     type Output = Self;
 
-    fn shl(self, rhs: usize) -> Self::Output {
+    fn shl(self, rhs: Self) -> Self::Output {
         todo!()
     }
 }

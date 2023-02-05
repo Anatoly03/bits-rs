@@ -4,7 +4,7 @@ use std::ops::Add;
 use crate::structs::nums::*;
 
 impl Add for UBigInt {
-    type Output = UBigInt;
+    type Output = Self;
 
     /**
      * Consider you have the following [u4] arrays.
@@ -39,7 +39,7 @@ impl Add for UBigInt {
 }
 
 impl Add for BigInt {
-    type Output = BigInt;
+    type Output = Self;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
@@ -47,7 +47,7 @@ impl Add for BigInt {
 }
 
 impl Add for UFraction {
-    type Output = UFraction;
+    type Output = Self;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
@@ -55,7 +55,7 @@ impl Add for UFraction {
 }
 
 impl Add for Fraction {
-    type Output = Fraction;
+    type Output = Self;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()

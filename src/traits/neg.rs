@@ -12,7 +12,7 @@ impl Neg for UBigInt {
 }
 
 impl Neg for BigInt {
-    type Output = BigInt;
+    type Output = Self;
 
     fn neg(self) -> Self::Output {
         BigInt(!self.0, self.1)
@@ -28,7 +28,7 @@ impl Neg for UFraction {
 }
 
 impl Neg for Fraction {
-    type Output = Fraction;
+    type Output = Self;
 
     fn neg(self) -> Self::Output {
         Fraction(!self.0, self.1)
