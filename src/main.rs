@@ -9,7 +9,7 @@ pub mod traits;
 fn main() {
     let big_int = UBigInt (vec![1, 10]);
     let big_int_2 = UBigInt (vec![Atomic::MAX, 10]);
-    let big_small = UBigInt (vec![5]);
+    let big_zero = UBigInt (vec![255]);
     let sum = &big_int + &big_int_2;
     
     println!("{:b}", big_int);
@@ -20,6 +20,7 @@ fn main() {
     // println!("{}", big_int_2.to_decimal_string());
     println!("{:b}", sum);
     println!("{:X}", sum);
+    println!("{:X}", big_zero);
     // println!("{}", sum.to_decimal_string());
     // println!("{}", big_small.to_decimal_string());
 }
