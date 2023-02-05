@@ -2,33 +2,17 @@ use std::fmt::Binary;
 
 use crate::structs::nums::*;
 
-fn pad_left(bn : String) -> String {
-    // if bn.len() == UNIT_SIZE {
-    //     return bn;
-    // }
-    String::from("_").repeat(UNIT_SIZE - bn.len()) + &bn
-}
-
 impl Binary for UBigInt {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let bits = self
-            .0
-            .clone()
-            .into_iter()
-            .rev()
-            .map(|i| format!("{i:b}"))
-            .map(pad_left)
-            .reduce(|a, b| a + &b)
-            .or(Some("0".to_string()))
-            .unwrap();
-
-        f.debug_tuple("UBigInt").field(&bits).finish()
+        f.debug_tuple("UBigInt").field(&self.to_bin()).finish()
     }
 }
 
 impl Binary for BigInt {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        todo!()
+        f.debug_tuple("BigInt")
+            .field(&(String::from(if self.0 { "-" } else { "" }) + &self.1.to_bin()))
+            .finish()
     }
 }
 
