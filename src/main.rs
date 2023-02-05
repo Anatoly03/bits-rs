@@ -13,4 +13,6 @@ fn main() {
     println!("{:b}", big_int);
     println!("{:b}", big_int_2);
     println!("{:b}", sum);
+
+    64i32.signum();
 }
