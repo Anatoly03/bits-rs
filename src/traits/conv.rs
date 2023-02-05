@@ -1,4 +1,6 @@
 
+use std::fmt::Error;
+
 use crate::structs::nums::*;
 
 /**
@@ -13,11 +15,14 @@ impl Into<BigInt> for UBigInt {
 /**
  * BigInt -> UBigInt
  */
-impl Into<UBigInt> for BigInt {
-    fn into(self) -> UBigInt {
+impl TryInto<UBigInt> for BigInt {
+    type Error = String;
+
+    fn try_into(self) -> Result<UBigInt, Self::Error> {
         if self.0 {
-            panic!("Tried to parse negative BigInt to unsigned!")
+            Err(String::from("Tried to parse negative BigInt to unsigned!"))
+        } else {
+            Ok(self.1)
         }
-        self.1
     }
 }
