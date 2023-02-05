@@ -3,7 +3,7 @@ use std::ops::Add;
 use crate::structs::*;
 
 impl Add for UBigInt {
-    type Output;
+    type Output = UBigInt;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
@@ -11,7 +11,7 @@ impl Add for UBigInt {
 }
 
 impl Add for BigInt {
-    type Output;
+    type Output = BigInt;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
@@ -19,7 +19,7 @@ impl Add for BigInt {
 }
 
 impl Add for UFraction {
-    type Output;
+    type Output = UFraction;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
@@ -27,7 +27,7 @@ impl Add for UFraction {
 }
 
 impl Add for Fraction {
-    type Output;
+    type Output = Fraction;
 
     fn add(self, rhs: Self) -> Self::Output {
         todo!()
