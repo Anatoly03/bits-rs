@@ -1,6 +1,4 @@
-use std::cmp::min;
-
-use crate::structs::nums::{UBits, BitIter};
+use crate::structs::nums::UBits;
 use crate::structs::consts::UNIT_SIZE;
 
 impl UBits {
