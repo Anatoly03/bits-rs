@@ -5,7 +5,7 @@ use crate::Atomic;
  * Param `0`: Vector of all
  */
 #[derive(PartialEq, Eq, Hash)]
-pub struct UBigInt(pub Vec<Atomic>);
+pub struct UBits(pub Vec<Atomic>);
 
 /**
  * Type `BigInt`
@@ -13,18 +13,5 @@ pub struct UBigInt(pub Vec<Atomic>);
  * Param `1` : Data
  */
 #[derive(PartialEq, Eq, Hash)]
-pub struct BigInt(pub bool, pub UBigInt);
+pub struct BigInt(pub bool, pub UBits);
 
-/*
- * Type `UFraction`
- * Param `0` : numerator
- * Param `1` : denominator
- */
-// pub struct UFraction (pub UBigInt, pub UBigInt);
-
-/*
- * Type `Fraction`
- * Param `0` : sign
- * Param `1` : fraction
- */
-// pub struct Fraction (pub bool, pub UFraction);

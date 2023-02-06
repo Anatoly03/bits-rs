@@ -2,7 +2,7 @@ use std::ops::Neg;
 
 use crate::structs::nums::*;
 
-impl Neg for UBigInt {
+impl Neg for UBits {
     type Output = BigInt;
 
     fn neg(self) -> Self::Output {

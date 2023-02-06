@@ -1,5 +1,5 @@
 use crate::impls::new::New;
-use crate::structs::nums::UBigInt;
+use crate::structs::nums::UBits;
 use crate::structs::consts::Atomic;
 
 pub mod structs;
@@ -9,9 +9,9 @@ pub mod traits;
 pub mod macros;
 
 fn main() {
-    let big_int = UBigInt (vec![1, 10]);
-    let big_int_2 = UBigInt (vec![Atomic::MAX, 10]);
-    let big_zero = UBigInt::new();
+    let big_int = UBits (vec![1, 10]);
+    let big_int_2 = UBits (vec![Atomic::MAX, 10]);
+    let big_zero = UBits::new();
     let sum = &big_int + &big_int_2;
 
     let test = num!("3124792073401784501945");

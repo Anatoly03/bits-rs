@@ -4,14 +4,14 @@
 #[macro_export]
 macro_rules! num {
     () => {
-        UBigInt(vec![])
+        UBits(vec![])
     };
 
     ( $x:expr ) => {
         {
             println!("{}", $x);
 
-            UBigInt(vec![])
+            UBits(vec![])
         }
     };
 }

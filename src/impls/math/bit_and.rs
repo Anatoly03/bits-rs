@@ -6,10 +6,10 @@ use crate::structs::nums::*;
 /**
  * UBigInt + UBigInt
  */
-impl<'a, 'b> BitAnd<&'b UBigInt> for &'a UBigInt {
-    type Output = UBigInt;
+impl<'a, 'b> BitAnd<&'b UBits> for &'a UBits {
+    type Output = UBits;
 
-    fn bitand(self, rhs: &'b UBigInt) -> Self::Output {
+    fn bitand(self, rhs: &'b UBits) -> Self::Output {
         let mut result = Vec::new();
         let limit = max(self.0.len(), rhs.0.len());
 
@@ -20,7 +20,7 @@ impl<'a, 'b> BitAnd<&'b UBigInt> for &'a UBigInt {
             result.push(a1 & a2);
         }
 
-        UBigInt(result)
+        UBits(result)
     }
 }
 

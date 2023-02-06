@@ -5,10 +5,10 @@ use crate::structs::nums::*;
 /**
  * UBigInt + UBigInt
  */
-impl<'a, 'b> Sub<&'b UBigInt> for &'a UBigInt {
-    type Output = UBigInt;
+impl<'a, 'b> Sub<&'b UBits> for &'a UBits {
+    type Output = UBits;
 
-    fn sub(self, rhs: &'b UBigInt) -> Self::Output {
+    fn sub(self, rhs: &'b UBits) -> Self::Output {
         todo!()
 
         //trim(self)

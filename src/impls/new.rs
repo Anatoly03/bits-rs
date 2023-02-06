@@ -4,14 +4,14 @@ pub trait New {
     fn new() -> Self;
 }
 
-impl New for UBigInt {
+impl New for UBits {
     fn new() -> Self {
-        UBigInt(Vec::new())
+        UBits(Vec::new())
     }
 }
 
 impl New for BigInt {
     fn new() -> Self {
-        BigInt(false, UBigInt::new())
+        BigInt(false, UBits::new())
     }
 }

@@ -3,7 +3,7 @@ use crate::structs::nums::*;
 /**
  * UBigInt -> BigInt
  */
-impl Into<BigInt> for UBigInt {
+impl Into<BigInt> for UBits {
     fn into(self) -> BigInt {
         BigInt(false, self)
     }
@@ -12,10 +12,10 @@ impl Into<BigInt> for UBigInt {
 /**
  * BigInt -> UBigInt
  */
-impl TryInto<UBigInt> for BigInt {
+impl TryInto<UBits> for BigInt {
     type Error = String;
 
-    fn try_into(self) -> Result<UBigInt, Self::Error> {
+    fn try_into(self) -> Result<UBits, Self::Error> {
         if self.0 {
             Err(String::from("Tried to parse negative BigInt to unsigned!"))
         } else {

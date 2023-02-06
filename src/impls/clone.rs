@@ -1,6 +1,6 @@
 use crate::structs::nums::*;
 
-impl Clone for UBigInt {
+impl Clone for UBits {
     fn clone(&self) -> Self {
         Self(self.0.clone())
     }
