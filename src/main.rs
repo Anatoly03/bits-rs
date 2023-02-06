@@ -16,6 +16,12 @@ fn main() {
 
     let test = num!("3124792073401784501945");
     
+    println!("{:b}", big_int);
+
+    for bit_index in big_int.clone().bit_iter() {
+        println!("{}", bit_index);
+    }
+    
     // println!("{:b}", big_int);
     // println!("{:b}", big_int_2);
     // println!("{:b}", sum);

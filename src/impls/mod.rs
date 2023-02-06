@@ -1,3 +1,4 @@
+pub mod bit_iter;
 pub mod math;
 pub mod string;
 pub mod clone;

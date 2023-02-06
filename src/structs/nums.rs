@@ -21,6 +21,6 @@ pub struct Bits(pub bool, pub UBits);
  */
 #[derive(Hash)]
 pub struct BitIter {
-    source: UBits,
-    current: usize
+    pub source: UBits,
+    pub current: usize
 }
