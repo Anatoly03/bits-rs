@@ -6,7 +6,7 @@ pub fn trim(mut bi: UBits) {
     }
 }
 
-pub fn set_sign_for_0(mut bi: BigInt) {
+pub fn set_sign_for_0(mut bi: Bits) {
     if bi.1.0.len() == 0 {
         bi.0 = false;
     }

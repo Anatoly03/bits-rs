@@ -18,10 +18,10 @@ impl<'a, 'b> Sub<&'b UBits> for &'a UBits {
 /**
  * BigInt + BigInt
  */
-impl<'a, 'b> Sub<&'b BigInt> for &'a BigInt {
-    type Output = BigInt;
+impl<'a, 'b> Sub<&'b Bits> for &'a Bits {
+    type Output = Bits;
 
-    fn sub(self, rhs: &'b BigInt) -> Self::Output {
+    fn sub(self, rhs: &'b Bits) -> Self::Output {
         todo!()
 
         //trim(self.1)

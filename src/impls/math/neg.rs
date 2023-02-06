@@ -3,18 +3,18 @@ use std::ops::Neg;
 use crate::structs::nums::*;
 
 impl Neg for UBits {
-    type Output = BigInt;
+    type Output = Bits;
 
     fn neg(self) -> Self::Output {
-        BigInt(true, self)
+        Bits(true, self)
     }
 }
 
-impl Neg for BigInt {
+impl Neg for Bits {
     type Output = Self;
 
     fn neg(self) -> Self::Output {
-        BigInt(!self.0, self.1)
+        Bits(!self.0, self.1)
     }
 }
 

@@ -10,7 +10,7 @@ impl Shl for UBits {
     }
 }
 
-impl Shl for BigInt {
+impl Shl for Bits {
     type Output = Self;
 
     fn shl(self, rhs: Self) -> Self::Output {

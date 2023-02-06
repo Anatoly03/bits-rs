@@ -39,12 +39,12 @@ impl<'a, 'b> Add<&'b UBits> for &'a UBits {
 /**
  * BigInt + BigInt
  */
-impl<'a, 'b> Add<&'b BigInt> for &'a BigInt {
-    type Output = BigInt;
+impl<'a, 'b> Add<&'b Bits> for &'a Bits {
+    type Output = Bits;
 
-    fn add(self, rhs: &'b BigInt) -> Self::Output {
+    fn add(self, rhs: &'b Bits) -> Self::Output {
         if self.0 == rhs.0 {
-            BigInt(self.0, self.1.add(&rhs.1))
+            Bits(self.0, self.1.add(&rhs.1))
         } else {
             todo!()
         }

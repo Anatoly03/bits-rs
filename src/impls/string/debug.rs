@@ -8,7 +8,7 @@ impl Debug for UBits {
     }
 }
 
-impl Debug for BigInt {
+impl Debug for Bits {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         f.debug_tuple("BigInt")
             .field(&self.0)

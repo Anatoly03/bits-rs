@@ -13,5 +13,5 @@ pub struct UBits(pub Vec<Atomic>);
  * Param `1` : Data
  */
 #[derive(PartialEq, Eq, Hash)]
-pub struct BigInt(pub bool, pub UBits);
+pub struct Bits(pub bool, pub UBits);
 

@@ -10,8 +10,8 @@ impl New for UBits {
     }
 }
 
-impl New for BigInt {
+impl New for Bits {
     fn new() -> Self {
-        BigInt(false, UBits::new())
+        Bits(false, UBits::new())
     }
 }

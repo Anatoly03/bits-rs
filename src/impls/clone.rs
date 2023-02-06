@@ -6,7 +6,7 @@ impl Clone for UBits {
     }
 }
 
-impl Clone for BigInt {
+impl Clone for Bits {
     fn clone(&self) -> Self {
         Self(self.0.clone(), self.1.clone())
     }

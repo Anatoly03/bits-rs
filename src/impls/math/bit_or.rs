@@ -27,10 +27,10 @@ impl<'a, 'b> BitOr<&'b UBits> for &'a UBits {
 /**
  * BigInt + BigInt
  */
-impl<'a, 'b> BitOr<&'b BigInt> for &'a BigInt {
-    type Output = BigInt;
+impl<'a, 'b> BitOr<&'b Bits> for &'a Bits {
+    type Output = Bits;
 
-    fn bitor(self, rhs: &'b BigInt) -> Self::Output {
-        BigInt(self.0 == rhs.0, &self.1 | &rhs.1)
+    fn bitor(self, rhs: &'b Bits) -> Self::Output {
+        Bits(self.0 == rhs.0, &self.1 | &rhs.1)
     }
 }

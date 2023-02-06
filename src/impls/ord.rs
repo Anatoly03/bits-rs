@@ -27,7 +27,7 @@ impl PartialOrd for UBits {
 /**
  * BigInt + BigInt
  */
-impl PartialOrd for BigInt {
+impl PartialOrd for Bits {
     // TODO fix bug where -0 and +0 are not the same
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         match (self.0, other.0) {
