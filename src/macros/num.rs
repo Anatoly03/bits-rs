@@ -1,12 +1,17 @@
-// #[macro_export]
-// macro_rules! num {
-//     ( $( $x:expr ),* ) => {
-//         {
-//             let mut big_int = UBigInt::zero();
-//             $(
-//                 temp_vec.push($x);
-//             )*
-//             big_int
-//         }
-//     };
-// }
+/**
+ * Converts a number in decimal notation to big int
+ */
+#[macro_export]
+macro_rules! num {
+    () => {
+        UBigInt(vec![])
+    };
+
+    ( $x:expr ) => {
+        {
+            println!("{}", $x);
+
+            UBigInt(vec![])
+        }
+    };
+}
