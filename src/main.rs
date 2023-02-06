@@ -9,13 +9,15 @@ pub mod traits;
 pub mod macros;
 
 fn main() {
-    let big_int = UBits (vec![1, 10]);
+    let mut big_int = UBits (vec![1, 10]);
     let big_int_2 = UBits (vec![Atomic::MAX, 10]);
     let big_zero = UBits::new();
     let sum = &big_int + &big_int_2;
 
     let test = num!("3124792073401784501945");
     
+    println!("{:b}", big_int);
+    big_int.set_bit(5);
     println!("{:b}", big_int);
 
     for bit_index in big_int.clone().bit_iter() {
