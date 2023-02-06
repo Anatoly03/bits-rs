@@ -1,4 +1,4 @@
-pub mod bit_iter;
+pub mod bit_level;
 pub mod math;
 pub mod string;
 pub mod clone;
