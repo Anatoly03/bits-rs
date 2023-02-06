@@ -15,3 +15,12 @@ pub struct UBits(pub Vec<Atomic>);
 #[derive(PartialEq, Eq, Hash)]
 pub struct Bits(pub bool, pub UBits);
 
+/**
+ * Type `BitIterator`
+ * Absorbs a a UBits and creates an iterator over the bits.
+ */
+#[derive(Hash)]
+pub struct BitIter {
+    source: UBits,
+    current: usize
+}
