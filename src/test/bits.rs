@@ -10,4 +10,15 @@ mod format {
         big_int.set_bit(5);
         assert!(format!("{:b}", big_int).ends_with("00100001"));
     }
+
+    #[test]
+    fn bit_iter() {
+        let big_int = UBits::from(vec![0b00010000, 0b00010001]);
+        let mut bit_iter = big_int.bit_iter();
+
+        assert_eq!(Some(0), bit_iter.next());
+        assert_eq!(Some(4), bit_iter.next());
+        assert_eq!(Some(13), bit_iter.next());
+        assert_eq!(None, bit_iter.next());
+    }
 }
