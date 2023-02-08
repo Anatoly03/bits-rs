@@ -1,4 +1,3 @@
-use crate::impls::new::New;
 use crate::structs::nums::UBits;
 use crate::structs::consts::Atomic;
 
