@@ -40,3 +40,45 @@ mod add {
         assert_eq!(vec![3, 1], k.0);
     }
 }
+
+mod sub {
+    #[test]
+    fn sub() {
+        todo!("Not implemented yet")
+    }
+}
+
+mod div {
+    #[test]
+    fn div() {
+        todo!("Not implemented yet")
+    }
+}
+
+mod rem {
+    #[test]
+    fn rem() {
+        todo!("Not implemented yet")
+    }
+}
+
+mod mul {
+    #[test]
+    fn mul() {
+        todo!("Not implemented yet")
+    }
+}
+
+mod shl {
+    #[test]
+    fn shl() {
+        todo!("Not implemented yet")
+    }
+}
+
+mod shr {
+    #[test]
+    fn shr() {
+        todo!("Not implemented yet")
+    }
+}
