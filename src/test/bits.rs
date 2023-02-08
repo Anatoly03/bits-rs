@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod format {
-    use crate::structs::nums::UBits;
+    use crate::structs::{nums::UBits, consts::Atomic};
 
     #[test]
     fn set_bit() {
@@ -18,7 +18,7 @@ mod format {
 
         assert_eq!(Some(0), bit_iter.next());
         assert_eq!(Some(4), bit_iter.next());
-        assert_eq!(Some(13), bit_iter.next());
+        assert_eq!(Some((4 + Atomic::BITS) as usize), bit_iter.next());
         assert_eq!(None, bit_iter.next());
     }
 
@@ -27,5 +27,12 @@ mod format {
         let big_int = UBits::from(vec![0b00010000, 0b00010001]);
         
         assert_eq!(3, big_int.cardinality());
+    }
+
+    #[test]
+    fn length() {
+        let big_int = UBits::from(vec![0b00010000, 0b00010001]);
+        
+        assert_eq!((4 + Atomic::BITS) as usize, big_int.len());
     }
 }

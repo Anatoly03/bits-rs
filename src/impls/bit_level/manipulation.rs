@@ -50,4 +50,8 @@ impl UBits {
 
         count
     }
+
+    pub fn len(&self) -> usize {
+        self.clone().bit_iter().last().or(Some(0)).unwrap()
+    }
 }
