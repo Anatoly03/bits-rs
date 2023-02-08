@@ -9,11 +9,10 @@ struct Bits {
 
 struct Number {
     source: [Bits, 2], // Pre Comma and Post Comma
-
+    sign: Sign, // Negative, positive, zero, complex?
 }
 ```
 
 ```rs
 num!("13376942077123456789") // Converts decimal to binary number representation
-    .
 ```
