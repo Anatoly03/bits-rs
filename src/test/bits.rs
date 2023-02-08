@@ -21,4 +21,11 @@ mod format {
         assert_eq!(Some(13), bit_iter.next());
         assert_eq!(None, bit_iter.next());
     }
+
+    #[test]
+    fn cardinality() {
+        let big_int = UBits::from(vec![0b00010000, 0b00010001]);
+        
+        assert_eq!(3, big_int.cardinality());
+    }
 }

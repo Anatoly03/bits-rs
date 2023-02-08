@@ -40,4 +40,14 @@ impl UBits {
             Some(bit)
         }
     }
+
+    pub fn cardinality(&self) -> usize {
+        let mut count = 0;
+
+        for _ in self.clone().bit_iter() {
+            count += 1;
+        }
+
+        count
+    }
 }
