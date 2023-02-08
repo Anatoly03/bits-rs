@@ -13,6 +13,16 @@ mod format {
     }
 
     #[test]
+    fn octal() {
+        let big_int = UBits::from(vec![255, 10]);
+        let formatted = format!("{:o}", big_int);
+
+        assert!(formatted.starts_with("12")); // Started with "10"
+        // Contains zeroes depending on the size of ATOMIC
+        assert!(formatted.ends_with("377")); // Ends with a byte that equals 1
+    }
+
+    #[test]
     fn hex() {
         let big_int = UBits::from(vec![255, 10]);
         let formatted = format!("{:X}", big_int);

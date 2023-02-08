@@ -14,7 +14,7 @@ fn main() {
 
     let test = num!("3124792073401784501945");
     
-    println!("{:X}", big_int);
+    println!("{:o}", big_int);
     big_int.set_bit(5);
     println!("{:b}", big_int);
 
