@@ -2,6 +2,7 @@
 
 ```rs
 struct Bits {
+    length, usize, // Allow end with 0 bits
     generator : [Fn(isize) -> Atomic], // Generator Method to fill in bits 
     data: Vec<Atomic> // Stored data
 }
