@@ -1,7 +1,7 @@
 
 #[cfg(test)]
 mod bit_or {
-    use crate::{structs::nums::UBits};
+    use crate::structs::nums::UBits;
 
     #[test]
     fn bit_or_zero() {
