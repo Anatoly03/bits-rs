@@ -7,6 +7,7 @@ pub mod impls;
 pub mod funcs;
 pub mod traits;
 pub mod macros;
+pub mod test;
 
 fn main() {
     let mut big_int = UBits (vec![1, 10]);
