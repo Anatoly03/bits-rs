@@ -32,6 +32,10 @@ impl<'a, 'b> Add<&'b UBits> for &'a UBits {
             carry = if a1.checked_add(*a2).is_none() { 1 } else { 0 }
         }
 
+        if carry > 0 {
+            result.push(1);
+        }
+
         UBits(result)
     }
 }
