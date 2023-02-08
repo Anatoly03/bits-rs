@@ -1,3 +1,4 @@
 pub mod arithmetic;
-pub mod logic;
+pub mod bits;
 pub mod format;
+pub mod logic;
