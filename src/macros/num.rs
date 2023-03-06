@@ -12,6 +12,8 @@ macro_rules! num {
             println!("{}", $x);
 
             Bits(vec![])
+
+            // Bits::from_str($x).expect("")
         }
     };
 }
