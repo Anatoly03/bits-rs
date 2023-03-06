@@ -23,34 +23,3 @@ impl PartialOrd for UBits {
         Some(Ordering::Equal)
     }
 }
-
-/**
- * BigInt + BigInt
- */
-impl PartialOrd for Bits {
-    // TODO fix bug where -0 and +0 are not the same
-    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        match (self.0, other.0) {
-            (true, true) => other.1.partial_cmp(&self.1), // negative compare
-            (true, false) => Some(Ordering::Less),        // self is negative
-            (false, true) => Some(Ordering::Greater),     // other is negative
-            (false, false) => self.1.partial_cmp(&other.1), // positive compare
-        }
-    }
-}
-
-// impl Add for UFraction {
-//     type Output = Self;
-
-//     fn add(self, rhs: Self) -> Self::Output {
-//         todo!()
-//     }
-// }
-
-// impl Add for Fraction {
-//     type Output = Self;
-
-//     fn add(self, rhs: Self) -> Self::Output {
-//         todo!()
-//     }
-// }

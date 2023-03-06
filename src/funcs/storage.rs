@@ -5,9 +5,3 @@ pub fn trim(mut bi: UBits) {
         bi.0.pop();
     }
 }
-
-pub fn set_sign_for_0(mut bi: Bits) {
-    if bi.1.0.len() == 0 {
-        bi.0 = false;
-    }
-}

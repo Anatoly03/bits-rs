@@ -39,34 +39,3 @@ impl<'a, 'b> Add<&'b UBits> for &'a UBits {
         UBits(result)
     }
 }
-
-/**
- * BigInt + BigInt
- */
-impl<'a, 'b> Add<&'b Bits> for &'a Bits {
-    type Output = Bits;
-
-    fn add(self, rhs: &'b Bits) -> Self::Output {
-        if self.0 == rhs.0 {
-            Bits(self.0, self.1.add(&rhs.1))
-        } else {
-            todo!()
-        }
-    }
-}
-
-// impl Add for UFraction {
-//     type Output = Self;
-
-//     fn add(self, rhs: Self) -> Self::Output {
-//         todo!()
-//     }
-// }
-
-// impl Add for Fraction {
-//     type Output = Self;
-
-//     fn add(self, rhs: Self) -> Self::Output {
-//         todo!()
-//     }
-// }

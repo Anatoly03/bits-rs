@@ -5,9 +5,3 @@ impl UBits {
         UBits(Vec::new())
     }
 }
-
-impl Bits {
-    pub fn new() -> Self {
-        Bits(false, UBits::new())
-    }
-}

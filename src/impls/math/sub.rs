@@ -14,17 +14,3 @@ impl<'a, 'b> Sub<&'b UBits> for &'a UBits {
         //trim(self)
     }
 }
-
-/**
- * BigInt + BigInt
- */
-impl<'a, 'b> Sub<&'b Bits> for &'a Bits {
-    type Output = Bits;
-
-    fn sub(self, rhs: &'b Bits) -> Self::Output {
-        todo!()
-
-        //trim(self.1)
-        //set_sign_for_0(self)
-    }
-}
