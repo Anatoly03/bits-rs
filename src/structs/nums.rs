@@ -4,7 +4,7 @@ use crate::Atomic;
  * Type `UBigInt`
  * Param `0`: Vector of all
  */
-#[derive(PartialEq, Eq, Hash)]
+#[derive(PartialEq, Eq, Hash, Clone)]
 pub struct UBits(pub Vec<Atomic>);
 
 /**
@@ -12,7 +12,7 @@ pub struct UBits(pub Vec<Atomic>);
  * Param `0` : Sign (True -> Negative)
  * Param `1` : Data
  */
-#[derive(PartialEq, Eq, Hash)]
+#[derive(PartialEq, Eq, Hash, Clone)]
 pub struct Bits(pub bool, pub UBits);
 
 /**
