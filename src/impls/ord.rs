@@ -5,7 +5,7 @@ use crate::structs::nums::*;
 /**
  * UBigInt + UBigInt
  */
-impl PartialOrd for UBits {
+impl PartialOrd for Bits {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         let limit = max(self.0.len(), other.0.len());
 

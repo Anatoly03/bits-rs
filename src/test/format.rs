@@ -1,10 +1,10 @@
 #[cfg(test)]
 mod format {
-    use crate::structs::nums::UBits;
+    use crate::structs::nums::Bits;
 
     #[test]
     fn binary() {
-        let big_int = UBits::from(vec![1, 10]);
+        let big_int = Bits::from(vec![1, 10]);
         let formatted = format!("{:b}", big_int);
 
         assert!(formatted.starts_with("1010")); // Started with "10"
@@ -14,7 +14,7 @@ mod format {
 
     #[test]
     fn octal() {
-        let big_int = UBits::from(vec![255, 10]);
+        let big_int = Bits::from(vec![255, 10]);
         let formatted = format!("{:o}", big_int);
 
         assert!(formatted.starts_with("12")); // Started with "10"
@@ -24,7 +24,7 @@ mod format {
 
     #[test]
     fn hex() {
-        let big_int = UBits::from(vec![255, 10]);
+        let big_int = Bits::from(vec![255, 10]);
         let formatted = format!("{:X}", big_int);
 
         assert!(formatted.starts_with("A")); // Started with "10"

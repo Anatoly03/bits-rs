@@ -5,7 +5,7 @@ use crate::Atomic;
  * Param `0`: Vector of all
  */
 #[derive(PartialEq, Eq, Hash, Clone)]
-pub struct UBits(pub Vec<Atomic>);
+pub struct Bits(pub Vec<Atomic>);
 
 /**
  * Type `BitIterator`
@@ -13,6 +13,6 @@ pub struct UBits(pub Vec<Atomic>);
  */
 #[derive(Hash)]
 pub struct BitIter {
-    pub source: UBits,
+    pub source: Bits,
     pub current: usize
 }

@@ -1,7 +1,7 @@
-use crate::structs::nums::{UBits, BitIter};
+use crate::structs::nums::{Bits, BitIter};
 
-impl From<UBits> for BitIter {
-    fn from(bits: UBits) -> Self {
+impl From<Bits> for BitIter {
+    fn from(bits: Bits) -> Self {
         BitIter {
             source: bits,
             current: 0,
@@ -9,7 +9,7 @@ impl From<UBits> for BitIter {
     }
 }
 
-impl UBits {
+impl Bits {
     pub fn bit_iter(self) -> BitIter {
         BitIter::from(self)
     }

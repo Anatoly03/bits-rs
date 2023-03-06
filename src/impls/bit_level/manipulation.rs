@@ -1,7 +1,7 @@
-use crate::structs::nums::UBits;
+use crate::structs::nums::Bits;
 use crate::structs::consts::UNIT_SIZE;
 
-impl UBits {
+impl Bits {
     /**
      * Sets bit at `pos` to `1`
      */

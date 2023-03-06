@@ -1,7 +1,7 @@
 use crate::structs::nums::*;
 
-impl UBits {
+impl Bits {
     pub fn new() -> Self {
-        UBits(Vec::new())
+        Bits(Vec::new())
     }
 }

@@ -1,12 +1,12 @@
 
 #[cfg(test)]
 mod bit_or {
-    use crate::structs::nums::UBits;
+    use crate::structs::nums::Bits;
 
     #[test]
     fn bit_or_zero() {
-        let i = UBits::new();
-        let j = UBits::new();
+        let i = Bits::new();
+        let j = Bits::new();
 
         // Swapped because of type problems
         assert_eq!(i.0, vec![]);
@@ -19,8 +19,8 @@ mod bit_or {
 
     #[test]
     fn bit_or() {
-        let i = UBits::from(vec![0b00110101]);
-        let j = UBits::from(vec![0b01100011]);
+        let i = Bits::from(vec![0b00110101]);
+        let j = Bits::from(vec![0b01100011]);
 
         let k = &i | &j;
 
@@ -30,12 +30,12 @@ mod bit_or {
 
 #[cfg(test)]
 mod bit_xor {
-    use crate::{structs::nums::UBits};
+    use crate::{structs::nums::Bits};
 
     #[test]
     fn bit_xor_zero() {
-        let i = UBits::new();
-        let j = UBits::new();
+        let i = Bits::new();
+        let j = Bits::new();
 
         // Swapped because of type problems
         assert_eq!(i.0, vec![]);
@@ -48,8 +48,8 @@ mod bit_xor {
 
     #[test]
     fn bit_xor() {
-        let i = UBits::from(vec![0b00110101]);
-        let j = UBits::from(vec![0b01100011]);
+        let i = Bits::from(vec![0b00110101]);
+        let j = Bits::from(vec![0b01100011]);
 
         let k = &i ^ &j;
 
@@ -59,12 +59,12 @@ mod bit_xor {
 
 #[cfg(test)]
 mod bit_and {
-    use crate::{structs::nums::UBits};
+    use crate::{structs::nums::Bits};
 
     #[test]
     fn bit_and_zero() {
-        let i = UBits::new();
-        let j = UBits::new();
+        let i = Bits::new();
+        let j = Bits::new();
 
         // Swapped because of type problems
         assert_eq!(i.0, vec![]);
@@ -77,8 +77,8 @@ mod bit_and {
 
     #[test]
     fn bit_and() {
-        let i = UBits::from(vec![0b00110101]);
-        let j = UBits::from(vec![0b01100011]);
+        let i = Bits::from(vec![0b00110101]);
+        let j = Bits::from(vec![0b01100011]);
 
         let k = &i & &j;
 

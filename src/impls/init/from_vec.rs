@@ -1,7 +1,7 @@
 use crate::structs::{consts::Atomic, nums::*};
 
-impl From<Vec<Atomic>> for UBits {
+impl From<Vec<Atomic>> for Bits {
     fn from(v: Vec<Atomic>) -> Self {
-        UBits(v)
+        Bits(v)
     }
 }

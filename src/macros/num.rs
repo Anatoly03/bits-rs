@@ -4,14 +4,14 @@
 #[macro_export]
 macro_rules! num {
     () => {
-        UBits(vec![])
+        Bits(vec![])
     };
 
     ( $x:expr ) => {
         {
             println!("{}", $x);
 
-            UBits(vec![])
+            Bits(vec![])
         }
     };
 }

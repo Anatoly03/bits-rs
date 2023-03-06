@@ -16,7 +16,7 @@ fn unpad_left(mut num: String) -> String {
     num
 }
 
-impl UBits {
+impl Bits {
     pub fn to_bin(&self) -> String {
         let s = self
             .0

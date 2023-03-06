@@ -6,8 +6,8 @@ use crate::structs::nums::*;
 /**
  * UBigInt + UBigInt
  */
-impl<'a, 'b> Add<&'b UBits> for &'a UBits {
-    type Output = UBits;
+impl<'a, 'b> Add<&'b Bits> for &'a Bits {
+    type Output = Bits;
 
     /**
      * Consider you have the following [u4] arrays.
@@ -16,7 +16,7 @@ impl<'a, 'b> Add<&'b UBits> for &'a UBits {
      * The sum would be:
      * `[0111, 0000, 1111]`
      */
-    fn add(self, rhs: &'b UBits) -> Self::Output {
+    fn add(self, rhs: &'b Bits) -> Self::Output {
         let limit = max(self.0.len(), rhs.0.len());
 
         let mut result = Vec::new();
@@ -36,6 +36,6 @@ impl<'a, 'b> Add<&'b UBits> for &'a UBits {
             result.push(1);
         }
 
-        UBits(result)
+        Bits(result)
     }
 }
