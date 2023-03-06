@@ -3,5 +3,6 @@ pub mod bit_and;
 pub mod bit_or;
 pub mod bit_xor;
 pub mod neg;
+pub mod ord;
 pub mod shl;
 pub mod sub;
