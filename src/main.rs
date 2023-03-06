@@ -2,7 +2,7 @@ use crate::structs::nums::Bits;
 use crate::structs::consts::Atomic;
 
 pub mod structs;
-pub mod impls;
+pub mod traits;
 pub mod funcs;
 pub mod macros;
 pub mod test;
